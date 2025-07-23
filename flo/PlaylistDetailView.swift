@@ -82,8 +82,8 @@ struct PlaylistDetailView: View {
 
         ForEach(Array(viewModel.playlist.songs.enumerated()), id: \.element) { idx, song in
           VStack {
-            HStack(alignment: .top) {
-              Text(idx.description)
+            HStack(alignment: .firstTextBaseline) {
+              Text((idx + 1).description)
                 .customFont(.caption1)
                 .foregroundColor(.gray)
                 .padding(.trailing, 5)
